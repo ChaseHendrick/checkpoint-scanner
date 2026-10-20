@@ -1,7 +1,5 @@
 # Submission Package — Vesuvius security report (October 2026)
 
-**The submission is one file: `VESUVIUS-SECURITY-REPORT.pdf`.** Everything the reviewers need sits inside it — the executive brief, every finding card, the prize-form answers, the digest pin set, and the audit transcripts as appendices. No Google Drive, no external hosting.
-
 ## Files
 
 - `VESUVIUS-SECURITY-REPORT.pdf` — the submission report (the one file reviewers read; the advisory attachment)
