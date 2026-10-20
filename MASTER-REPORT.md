@@ -63,7 +63,7 @@ The security entry goes on the **monthly Progress Prize form** (deadline 31 Octo
 
 # The villa artifact-trust report — consolidated disclosure draft
 
-Prepared 19 October 2026 for Chase Hendrick. **Everything below was verified locally on our own copies (macOS 15 arm64, CPU-only) — no live third-party server was ever probed or attacked.** Five villa passes are complete as of 19 October 2026 — the model-zoo load path, the lasagna fit service and surface/label exchange machinery, the data-access package, a custom harness/fuzz build, and a passive abuse-scan of the community's distributed checkpoints — preceded by the first pass on the downstream community CLI that opened the engagement (summarized in Appendix A). The villa transcripts are Appendices B–D, the findings register is Appendix E, and results are folded into the finding cards.
+**Everything below was verified locally on our own copies (macOS 15 arm64, CPU-only) — no live third-party server was ever probed or attacked.** Five villa passes are complete as of 19 October 2026 — the model-zoo load path, the lasagna fit service and surface/label exchange machinery, the data-access package, a custom harness/fuzz build, and a passive abuse-scan of the community's distributed checkpoints — preceded by the first pass on the downstream community CLI that opened the engagement (summarized in Appendix A). The villa transcripts are Appendices B–D, the findings register is Appendix E, and results are folded into the finding cards.
 
 **How to read this document.** Each finding card has four fields, in this order:
 1. **In plain terms** — what this means for a member of the community who has never read the code.
