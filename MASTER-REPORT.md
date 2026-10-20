@@ -326,8 +326,6 @@ Shortlist:
 5. **Public issue: `_load_label_2d` axis bug + set-max-pixels cleanups** (findings 6+11) — fix makes the labels dataset pipeline safer and removes a DoS root.
 6. **MED work: tifxyz `/tmp` cache + `trace_service` socket perms** (findings 7+9) — security advisory if combined with a shared-workstation deployment doc; avoids a shared-box ACE class that Modal-host batch jobs don't see.
 
-Reward-caveat honestly stated: ScrollPrize's prize culture rewards *impactful fixes* most; the RCE class is the only one with practical scope. Keep the private advisory channel early; progress-credit tracking after the fix.
-
 ---
 
 ### 3. Ink-label / “verified letters” integrity analysis (local only)
