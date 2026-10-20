@@ -8,5 +8,3 @@
 - `VESUVIUS-AUDIT-EVIDENCE-PACK.zip` — the payloads, clearly labeled, attached to the advisory or handed over on request
 - `MASTER-REPORT.md` — same content as the PDF, machine-readable source it is built from
 - `04-PIN-SHA256.txt` — standalone digest pins (`shasum -a 256 -c 04-PIN-SHA256.txt`); also embedded as section 4 of the report
-
-Embargo state: pre-patch. Payloads live only in the evidence pack (this folder's zip).
