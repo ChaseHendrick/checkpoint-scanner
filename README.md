@@ -1,10 +1,6 @@
-# Submission package — Vesuvius security report (October 2026 Progress Prize)
+# Submission Package — Vesuvius security report (October 2026)
 
 **The submission is one file: `VESUVIUS-SECURITY-REPORT.pdf`.** Everything the reviewers need sits inside it — the executive brief, every finding card, the prize-form answers, the digest pin set, and the audit transcripts as appendices. No Google Drive, no external hosting.
-
-## Where it goes (order matters)
-
-1. **File the private GitHub security advisory on `ScrollPrize/villa` first.** Attach this PDF plus the labeled evidence pack — `VESUVIUS-AUDIT-EVIDENCE-PACK.zip` — theirs for anyone who wants to see payloads: every proof-of-concept and effect artifact, the finding→artifact map, `README-FIRST.txt`, and `MANIFEST.sha256` inside for verifying the contents.
 
 ## Files
 
