@@ -13,4 +13,4 @@
 - `MASTER-REPORT.md` — same content as the PDF, machine-readable source it is built from
 - `04-PIN-SHA256.txt` — standalone digest pins (`shasum -a 256 -c 04-PIN-SHA256.txt`); also embedded as section 4 of the report
 
-Embargo state: pre-patch. Nothing in this package goes public before a fix ships; payloads live only in the evidence pack (this folder's zip and the private `evidence_pack/` mirror).
+Embargo state: pre-patch. Payloads live only in the evidence pack (this folder's zip).
