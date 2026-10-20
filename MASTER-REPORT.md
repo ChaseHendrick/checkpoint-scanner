@@ -182,7 +182,7 @@ The community's AI models work by "checkpoint" files: think of them as save file
 
 ## Part E — disclosure order (agreed)
 
-1. __Private advisory first__ (`advisory-draft.md` path), targeted at ScrollPrize/villa (and CC: where a component has its own maintainer — ThaumatoAnakalyptor). Bundles: __One advisory__ for the checkpoint-loader family (Findings 1 + 2 + training path + partial-weights); one for the scratch-file/cache/TLS trio (3+4+5); public issues afterwards for the annex (6–7 + everything-else list) once fixes land.
+1. __Advisory first__ (`advisory-draft.md` path), targeted at ScrollPrize/villa. Bundles: __One advisory__ for the checkpoint-loader family (Findings 1 + 2 + training path + partial-weights); one for the scratch-file/cache/TLS trio (3+4+5); public issues afterwards for the annex (6–7 + everything-else list) once fixes land.
 2. __Fix PRs__: Layer 1 (safe loader + allowlist + honored flag + missing-keys guard); Layer 2 (cache-prefix check; SSL default; scratch-file hardening); Layer 3 spot fixes.
 3. __Public report__ (this document, minus live payloads; reproduce script only after a fix lands).
 4. __Progress Prize entry__ — bundle under the month's rule; a report + reusable detection tool + fix diffs is one coherent contribution.
@@ -206,87 +206,7 @@ __Boundaries (stated plainly):__ everything above ran on our own clones and loop
 
 # 3 — Prize-form entry (Progress Prize, October round)
 
-# Progress Prize form entry — paste-ready (October 2026 round)
-
-Form: https://docs.google.com/forms/d/e/1FAIpQLSc4flEfgK2nyjoczz2_U_XrIGMlgrnSknWatLqrFPnbtKfZwg/viewform
-Deadline: **31 October 2026, 11:59 p.m. Pacific.** Per established convention: Chase fills in the identity fields and accepts the terms himself; nothing is submitted by the assistants.
-
-## Q1 — Email
-*(Chase supplies. "Record my email address" stays ticked.)*
-
-## Q2 — Full name
-Chase Hendrick
-
-## Q3 — Team description
-```
-Individual. I directed the work and reviewed everything; AI coding
-assistants (Claude Code, Codex and Grok) wrote much of the code, tests and
-report text under my direction. I filed every disclosure step myself.
-```
-
-## Q4 — Discord display name
-*(Chase supplies his exact display name, or leaves blank.)*
-
-## Q5 — URL of your open source / publicly available contribution
-**Primary link (this round): the private GitHub security advisory on `ScrollPrize/villa`.** File it first — attach this report (the one PDF) plus the clearly labeled evidence pack **`VESUVIUS-AUDIT-EVIDENCE-PACK.zip`** (every payload and effect artifact, a finding→artifact map, and the `MANIFEST.sha256` inside). Reviewers who want the payloads can have them: the advisory carries the pack; on-request handover works the same file. The form asks for a URL and has no file slot, so the report and its payloads travel inside the advisory, exactly where the maintainers who review can read everything without ever touching a broken-embargo copy of the findings. Paste the advisory URL here once filed.
-**When a fix PR lands on `ScrollPrize/villa`** (or the public sanitized release is made — report + scanner + pin set, Apache 2.0), add these as extra lines:
-```
-<fix PR URL on ScrollPrize/villa>
-https://github.com/ChaseHendrick/checkpoint-scanner
-```
-The `checkpoint-scanner` repository holds this report, the scanner tool, the digest pins, and the labeled evidence pack. While the findings are unfixed it stays **private** — reviewers read it once they are added to the repo (same control as the advisory), or after the fix ships it goes public with the sanitized edition. If it is visible to reviewers by form day, it is the cleaner first line.
-**Note on timing:** the report contains an unfixed vulnerability class; the *public* version is the sanitized one (repro commands, evidence, fixes — live payloads attached only to the private GitHub security advisory, which was filed first). If the fix has landed by form day, the fix PR link becomes the strongest first line.
-
-## Q6 — What is your contribution?
-```
-A security audit of the software the Vesuvius community runs on the public
-scan data — the pipeline machinery, not a reading.
-
-1. Scroll data. No scan data was altered and no model quality is claimed.
-The work ran locally against the public pipeline (ScrollPrize/villa and
-neighbors) and the files the community actually distributes: public
-checkpoints on Hugging Face (domenicor046 reader-v2/v3 and ink9um-dense;
-scrollprize ink_9um, winding_model_9um, hecate) and dl.ash2txt.org
-community uploads, checked byte-level without executing them.
-
-2. How it helps reading. The trust machinery can silently damage what
-becomes evidence. Loaders run arbitrary code from any exchanged checkpoint
-(74 call sites in 56 files load model files with PyTorch's safe mode
-switched off; a crafted file executes before any data check). A write to a volume during
-rendering can leave an ink map that internally matches two file generations
-at once, with no error raised. Masks and labels can silently come out empty
-(page-stacked label TIFFs are misread and hollow labels are written into
-provenance-carrying stores used for training). Each fix makes surfaces,
-renders and ink maps trustworthy on purpose, which is what a first-letters
-attempt needs; until then, "no ink" and a broken artifact look identical.
-
-3. What it enables. Verify-then-load for checkpoints (safe weights_only
-loading with an explicit module allowlist), a published SHA-256 pin set for
-every distributed artifact (the first for ash2txt community uploads — one
-shasum command now catches a substituted model file), render-time integrity
-verification that makes concurrent-write corruption detectable, and a
-reusable audit harness (deserialization census, parser contract tests, and
-an offline checkpoint scanner with a CLEAN/SUSPICIOUS/WEAPONIZED verdict)
-so this bug class is caught by tooling instead of by surprise. It also
-proposes the repo's first SECURITY.md so future reports have a channel.
-
-4. Evidence. All local, all reproducible from the report: an executed
-marker-file PoC for the checkpoint loader (withheld from circulation
-pending a fix, as standard practice), a quadrant-level analysis showing the
-mid-run-swap output matches neither file baseline, and a passive abuse scan
-of the community's distributed artifacts (19 fully parsed, 12 more scanned
-by range request; ~2.9 GB read, nothing executed) certifying that no
-weaponized artifact existed in the observed channels as of 19 October 2026.
-The report lists every finding with exact file and line, reproduction and a
-one-pattern fix; a disclosure timeline it follows: private advisory first,
-fix PRs, then public report. Scans/certifications carry claim labels and
-limits; no letter in any scroll is claimed and none is needed for this to
-help.
-```
-*(Drafted ~330 words to keep under any practical form limit; trim the parentheticals further if the field fights back.)*
-
-## Q7 — Terms and Conditions
-Tick **Yes, I agree** after reading. The method is released under Apache 2.0 on public main; note for the review, if asked: the scanner tool and report are Apache-2.0, and villa patches follow each patched file's license (villa top-level MIT).
+Removed.
 
 ---
 
