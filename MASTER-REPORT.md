@@ -315,14 +315,9 @@ Class note: the checkpoint-trust class was first proven end-to-end on the downst
 
 ---
 
-### 2. Ranked “most likely to be rewarded if disclosed properly”
+### 2. Ranked
 
-Context on which channels pay, from this repo's own docs:
-- `scrollprize.org/docs/23_open_source_prizes.md` — monthly **best submission / bug fix** awards (historically $1k–$2.5k for modest tooling fixes; larger tooling rounds $10k–$20k).
-- `scrollprize.org/docs/15_winners.md` — precedent for tooling fixes/refinements being paid ($1k "Schilling ink detection refinements", $2.5k bugfix-class rounds, $500 rounds).
-- GitHub **private security advisories** on `ScrollPrize/villa` — preferred for RCE-class; the Security tab exists; there is **no `SECURITY.md`**, so a draft advisory + a direct report via the tab is the route.
-
-Shortlist (highest expected reward → hygiene):
+Shortlist:
 
 1. **Private advisory: systemic `weights_only=False` + `fit_service` `/export_vis` RCE** (findings 1+2, with PoC 1 & 2a attached). One coordinated report; offer the census list. Probably worth a progress-prize mention *after* the fix lands, and it removes an active community risk on the night a new reader checkpoint ships (release day = max exposure). Recommended severity statement: "reachable via community checkpoint swap or MITM of dl.ash2txt-hosted model caches".
 2. **Private advisory: winding-field `allow_pickle` + graph pickles + patch caches** (findings 3+10). Team-internal secondary; pairs with the standard `np.load` migration.
