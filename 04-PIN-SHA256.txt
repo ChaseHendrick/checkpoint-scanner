@@ -1,0 +1,25 @@
+# Verify-then-load pin set — as measured 2026-10-19 (byte-level, nothing executed)
+# Usage: shasum -a 256 -c pin-check.txt   (from the folder holding the files)
+# Or:    shasum -a 256 <file>            (compare against the value below)
+# Caveat: downloaded copies only; re-measure any NEW version rather than trusting a stale pin.
+
+ea405417450abd8ace1b8ff79ebce3adb646c5e48ab95da46844d77efe984d8a  reader-v3.pth
+c9776873cc9c44d5d24f2ba3126986cb5a81fba3d2929ae5b89c288c43d86d1e  never_seen_0841_w00.jpg
+654ec5acec2b6c4788d9cb326e2f0b8c2c730584949a934ef775db7f6ab5d3a6  reader-v2-step040000.pth
+6bad92971b029857f23d1ab46a623b0f2cd6c9605c05d1939c8f859b0d98f79b  reader-v2-init-ft12k.pth
+a69e9cf23263d4b17a85f05501333408f923f67f65b6f4ebc6c4539ceb1e81ec  reader-v2/train_config.json
+1d7b99bc641b459736a762b2a1d8c357f61ada4f0117c24c7327b6a1293ba1eb  ink9um-dense/dense9um-w016excluded-step075000.pth
+a92875559e654a35a0702e3563a95914131692ae8b832a0f86ac8e239947897d  ink9um-dense/dense9um-w016excluded-step060000-best.pth
+4e23f3cd6e5742a2911431145e825fe4523f8abdcb8790615e209dfc20be7977  ink9um-dense/dense9um-all7-step075000.pth
+e60cee6b2c08a021ddfa9683869dab91787531cef762d833cc1f21fdee7fa114  ink9um-dense/control-manuallabels-step075000.pth
+093cdb7dd03d881ba280be2b9b9fcb6ecf4f36594399a5a99e89538ad836736f  ink9um-dense-labels/ink9um-dense-pseudolabels.tar
+e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab  scrollprize/ink_9um/hybrid_3d2d-seed42/step-075000.pth
+2aeaa85a35ef28d7bc7bf3e848c4a6a91385e9132710927fdba41133c4ecb28f  scrollprize/ink_9um/hybrid_3d2d-seed43/step-075000.pth
+805a868c5ef518e4edb567ac2ddc63dfbf870f21b1164ae1642baa1781ad8f02  scrollprize/winding_model_9um/ckpt_final.pth
+4b1b890950f8b102511eba1bbdc350fa1662ef1039a223f608af417211cf6e05  scrollprize/winding_model_9um/config.json
+809f4f10f7cb7afa19b4bee0f7d2ab31edd7e11b664f9f210cc9c17f22fcfe5d  scrollprize/hecate/hecate_9.6um.pth
+fa2de3827ebd247ff2d33df1b6f899ea79d5269036cf16765997c62f0e9988c7  scrollprize/hecate/hecate_2.4um.pth
+c232c18a1a86cfb91257a00db13288202bb8ae33732ba26f7291a9b8adb8da59  scrollprize/hecate/hecate.py
+774a3bbd9cf6d0c1fdc7ce2a6c953b91620573a4f96196053fcc98078ca6b2f2  dl.ash2txt.org community-uploads/bruniss/old_models/Dataset009_3d-ink/fold_0/checkpoint_final.pth
+# Note: the ash2txt community upload has NO upstream-published digest; this file is
+# the first published pin for it. HF artifacts above match their published LFS oids.
