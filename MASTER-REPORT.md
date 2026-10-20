@@ -319,7 +319,7 @@ Class note: the checkpoint-trust class was first proven end-to-end on the downst
 
 Shortlist:
 
-1. **Private advisory: systemic `weights_only=False` + `fit_service` `/export_vis` RCE** (findings 1+2, with PoC 1 & 2a attached). One coordinated report; offer the census list. Probably worth a progress-prize mention *after* the fix lands, and it removes an active community risk on the night a new reader checkpoint ships (release day = max exposure). Recommended severity statement: "reachable via community checkpoint swap or MITM of dl.ash2txt-hosted model caches".
+1. **Private advisory: systemic `weights_only=False` + `fit_service` `/export_vis` RCE** (findings 1+2, with PoC 1 & 2a attached). One coordinated report; offer the census list. It removes an active community risk on the night a new reader checkpoint ships (release day = max exposure). Recommended severity statement: "reachable via community checkpoint swap or MITM of dl.ash2txt-hosted model caches".
 2. **Private advisory: winding-field `allow_pickle` + graph pickles + patch caches** (findings 3+10). Team-internal secondary; pairs with the standard `np.load` migration.
 3. **Private advisory bundle: `catalog.py` CERT_NONE + vc_reader cache traversal** (findings 8+4). Clear fixes, small diffs, PR #2157 authors are the likely reviewers — fastest possible merge-to-fix.
 4. **Public bug report (no PoC code): thaumato command-injection sweeps** (finding 5, with `shutil.copy2` fix proposal and the 18-file list) — lower harm but iconic; probably accepted whenever someone sees it; a $500-class fix if bundled with label tool correctness.
