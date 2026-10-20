@@ -39,7 +39,7 @@ The security entry goes on the **monthly Progress Prize form** (deadline 31 Octo
 
 # Executive brief — Vesuvius pipeline security report
 
-**What we did.** A white-box security audit of the open-source pipeline the Vesuvius community runs daily (ScrollPrize/villa and its neighborhood), done entirely locally against our own copies and public artifacts. No live server was probed, no one else's systems touched, nothing published. Working with AI-assisted review throughout (Chase directed; assistants wrote much of the code and tests), five passes ran: villa-main's model zoo, the lasagna fit service and surface/label exchange machinery, the new data-access package, a custom detection-harness build, and a passive scan of every checkpoint the community actually distributes — after a first pass on the downstream community CLI that first revealed the checkpoint-trust class (summarized in Appendix A).
+**What I did.** A white-box security audit of the open-source pipeline the Vesuvius community runs daily (ScrollPrize/villa and its neighborhood), done entirely locally against our own copies and public artifacts. No live server was probed, no one else's systems touched, nothing published. Working with AI-assisted review throughout (Chase directed; assistants wrote much of the code and tests), five passes ran: villa-main's model zoo, the lasagna fit service and surface/label exchange machinery, the new data-access package, a custom detection-harness build, and a passive scan of every checkpoint the community actually distributes — after a first pass on the downstream community CLI that first revealed the checkpoint-trust class (summarized in Appendix A).
 
 **The seven findings that matter** (all locally reproduced, exact file:line in the big report):
 
